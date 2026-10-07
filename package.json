@@ -1,0 +1,13 @@
+{
+  "name": "sru-shark-tank",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "npm install --prefix server && npm install --prefix client",
+    "dev": "npx concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "seed": "npm run db:seed --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
